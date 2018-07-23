@@ -13,13 +13,9 @@
   <% end %>
 </ol>
 
-<!-- cookbook.each_with_index do |recipe, index|
-  completed = recipe.completed == "true" || recipe.completed == true ? "[x]" : "[ ]"
-  puts "#{index + 1}. #{completed} #{recipe.name} (#{recipe.prep_time}) (#{recipe.difficulty})"
-end -->
+<h1>Enter the index of the recipe you want to delete</h1>
 
-<br>
-<a href=/new>Enter a new recipe</a>
-<br>
-<a href=/destroy>Remove a recipe</a>
-<br>
+<form method="POST" action="/remove">
+  <p>Name: <input type="text" name="index"></p>
+  <input type="submit">
+</form>
